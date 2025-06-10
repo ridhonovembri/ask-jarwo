@@ -7,6 +7,7 @@
     -   NodeJs  [https://nodejs.org/en/download](https://nodejs.org/en/download)
     -   ExpressJS  [https://expressjs.com/](https://expressjs.com/)
     -   OpenRouter [https://openrouter.ai/](https://openrouter.ai/)
+    -   Groq [https://groq.com//](https://groq.com//)
 * Frontend
     -   VueJs 3  [https://vuejs.org/](https://vuejs.org/)
     -   PrimeVue Component  [https://primevue.org/](https://primevue.org/)
