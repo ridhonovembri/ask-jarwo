@@ -40,29 +40,29 @@ exports.generateResponseGroq = async (req, res) => {
 
   // console.log(prompt);
 
-  const groq = new Groq();
-  const response = await groq.chat.completions.create({
-    messages: [
-      {
-        role: "user",
-        content: prompt,
-      },
-    ],
-    // model: "meta-llama/llama-4-scout-17b-16e-instruct",
-    model: "meta-llama/llama-4-maverick-17b-128e-instruct",
-    // model: "deepseek-r1-distill-llama-70b",
-    temperature: 1,
-    max_completion_tokens: 1024,
-    top_p: 1,
-    stream: false,
-    // response_format: {
-    //   type: "json_object",
-    // },
-    stop: null,
-  });
+  // const groq = new Groq();
+  // const response = await groq.chat.completions.create({
+  //   messages: [
+  //     {
+  //       role: "user",
+  //       content: prompt,
+  //     },
+  //   ],
+  //   // model: "meta-llama/llama-4-scout-17b-16e-instruct",
+  //   model: "meta-llama/llama-4-maverick-17b-128e-instruct",
+  //   // model: "deepseek-r1-distill-llama-70b",
+  //   temperature: 1,
+  //   max_completion_tokens: 1024,
+  //   top_p: 1,
+  //   stream: false,
+  //   // response_format: {
+  //   //   type: "json_object",
+  //   // },
+  //   stop: null,
+  // });
 
-  const script =
-    response.choices?.[0]?.message?.content || "No script generated";
+  // const script =
+  //   response.choices?.[0]?.message?.content || "No script generated";
 
-  res.json({ response: script });
+  res.json({ response: "Hi" });
 };
