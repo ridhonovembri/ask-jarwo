@@ -64,5 +64,5 @@ exports.generateResponseGroq = async (req, res) => {
   // const script =
   //   response.choices?.[0]?.message?.content || "No script generated";
 
-  res.json({ response: "Hi" });
+  res.json({ response: "Hi... I am AI" });
 };
