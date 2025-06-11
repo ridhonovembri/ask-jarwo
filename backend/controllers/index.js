@@ -1,6 +1,7 @@
 // const OpenAI = require("openai");
 // const Groq = require("groq-sdk");
-// import { groq } from '@ai-sdk/groq';
+const { groq } = require("@ai-sdk/groq");
+const { generateText } = require("ai");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -65,5 +66,16 @@ exports.generateResponseGroq = async (req, res) => {
   // const script =
   //   response.choices?.[0]?.message?.content || "No script generated";
 
-  res.json({ response: "Hi... I am AI" });
+  const { text } = await generateText({
+    model: groq("meta-llama/llama-4-maverick-17b-128e-instruct"),
+    prompt: prompt,
+    temperature: 1,
+    max_completion_tokens: 1024,
+    top_p: 1,
+    stream: false,
+  });
+
+  // console.log("reply ==> ", text)
+
+  res.json({ response: text });
 };
