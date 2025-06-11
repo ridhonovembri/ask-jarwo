@@ -1,5 +1,6 @@
 // const OpenAI = require("openai");
 // const Groq = require("groq-sdk");
+import { groq } from '@ai-sdk/groq';
 
 const dotenv = require("dotenv");
 dotenv.config();
