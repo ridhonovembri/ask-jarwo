@@ -66,6 +66,7 @@ exports.generateResponseGroq = async (req, res) => {
   // const script =
   //   response.choices?.[0]?.message?.content || "No script generated";
 
+  
   const { text } = await generateText({
     model: groq("meta-llama/llama-4-maverick-17b-128e-instruct"),
     prompt: prompt,
